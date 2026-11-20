@@ -322,6 +322,7 @@ img {
     position: relative;
     overflow: hidden;
     touch-action: pan-y;
+    background: #f5f5f5;
 }
 
 .slider-track {
@@ -332,13 +333,18 @@ img {
 
 .clinic-slide {
     min-width: 100%;
-    height: 520px;
+    height: 560px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .clinic-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
 }
 
 .slider-controls {
@@ -465,7 +471,7 @@ img {
 
 .works-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -475,19 +481,24 @@ img {
 }
 
 .work-image {
-    height: 350px;
+    height: 440px;
     overflow: hidden;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: .5s;
 }
 
 .work-card:hover .work-image img {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 
 .work-info {
@@ -527,6 +538,7 @@ img {
     overflow: hidden;
     width: 100%;
     touch-action: pan-y;
+    background: #f5f5f5;
 }
 
 .ba-track {
@@ -537,14 +549,18 @@ img {
 
 .ba-slide {
     min-width: 100%;
-    height: 440px;
+    height: 560px;
     background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ba-slide img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: center;
 }
 
 .ba-pagination {
@@ -865,6 +881,18 @@ img {
     .review-card {
         min-width: calc((100% - 16px) / 2);
     }
+
+    .clinic-slide {
+        height: 460px;
+    }
+
+    .work-image {
+        height: 390px;
+    }
+
+    .ba-slide {
+        height: 460px;
+    }
 }
 
 /* ================================
@@ -944,7 +972,15 @@ img {
     }
 
     .clinic-slide {
-        height: 400px;
+        height: 420px;
+    }
+
+    .work-image {
+        height: 370px;
+    }
+
+    .ba-slide {
+        height: 420px;
     }
 
     .contacts-grid {
@@ -1081,7 +1117,7 @@ img {
     }
 
     .clinic-slide {
-        height: 285px;
+        height: 340px;
     }
 
     .slider-controls {
@@ -1125,7 +1161,7 @@ img {
     }
 
     .work-image {
-        height: 250px;
+        height: 350px;
     }
 
     .work-info {
@@ -1148,7 +1184,7 @@ img {
     }
 
     .ba-slide {
-        height: 260px;
+        height: 350px;
     }
 
     .ba-pagination {
@@ -1321,11 +1357,15 @@ img {
     }
 
     .clinic-slide {
-        height: 245px;
+        height: 290px;
+    }
+
+    .work-image {
+        height: 300px;
     }
 
     .ba-slide {
-        height: 225px;
+        height: 290px;
     }
 
     .contact-item {
